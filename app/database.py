@@ -10,11 +10,11 @@ load_dotenv()
 
 DB = {
     'drivername': 'mysql+mysqlconnector',
-    'host': os.getenv('DB_ADDRESS', '34.71.20.154'),
+    'host': os.getenv('DB_ADDRESS'),
     'port': '3306',
-    'username': os.getenv('DB_USER', 'furraylogic'),
-    'password': os.getenv('DB_PWD', 'FurrayL@2AVEl'),
-    'database': os.getenv('DB_SCHEMA', 'bkgpal'),
+    'username': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PWD'),
+    'database': os.getenv('DB_SCHEMA'),
     'query': {'charset':'utf8'}
 }
 
