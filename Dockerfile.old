@@ -1,0 +1,14 @@
+From python:3.8
+
+WORKDIR /bookingpal
+
+# install python dependencies
+RUN pip install --upgrade pip
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+EXPOSE 80
+
+COPY . .
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
